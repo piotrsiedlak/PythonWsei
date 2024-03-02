@@ -9,10 +9,10 @@ name = input("Podaj imię: ")
 age = int(input("Podaj ile masz lat: "))
 print("Cześć "+ name +"!")
 print("Twoje imię ma " + str((len(name))) + " liter i zaczyna się od " + name[0])
-print("Teraz masz " + str(age) + "lat, a za rok będzie to " + str(age+1) + ". Rok urodzenia to : " + str(datetime.datetime.now().year-age))
+print("Teraz masz " + str(age) + " lat, a za rok będzie to " + str(age+1) + ". Rok urodzenia to : " + str(datetime.datetime.now().year-age))
 
-age = 12#int(input("Podaj ile masz lat: "))
-money = 10#int(input("Podaj ile masz siana: "))
+age = int(input("Podaj ile masz lat: "))
+money = int(input("Podaj ile masz pieniędzy: "))
 if (age >= 18) and (money >= 20):
     print("Jesteś pełnoletni i masz wystarczającą ilość pieniędz")
 elif (age >= 18) and (money < 20):
@@ -21,7 +21,6 @@ elif (age < 18) and (money >= 20):
     print("Brakuje Ci " + str(18-age) + " lat do pełnoletności.")
 else:
     print("Brakuje Ci " + str(20-money) + " zł oraz "+ str(18-age) + " lat do pełnoletności.")
-
 
 is_yearly = input("Podaj sposób podawania dochodu roczny (R) albo miesięczny (M): ")
 if is_yearly.upper() == "R":
