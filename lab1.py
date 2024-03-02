@@ -3,8 +3,10 @@
 
 import datetime
 import calendar
-""" name = "Piotr" #input("Podaj imię: ")
-age = 30#int(input("Podaj ile masz lat: "))
+import math
+
+name = input("Podaj imię: ")
+age = int(input("Podaj ile masz lat: "))
 print("Cześć "+ name +"!")
 print("Twoje imię ma " + str((len(name))) + " liter i zaczyna się od " + name[0])
 print("Teraz masz " + str(age) + "lat, a za rok będzie to " + str(age+1) + ". Rok urodzenia to : " + str(datetime.datetime.now().year-age))
@@ -40,12 +42,27 @@ else:
     print(f"Jesteś w drugim progu podatkowym. Twój podatek do zapłacenia to: {tax_to_pay} zł") """
     
 
-# Napisz prosty program do obliczania pola figur geometrycznych. Użytkownik proszony jest o podanie nazwy figury w formie stringa (np. “prostokąt”, “trójkąt”, “koło” itd. - wersja 
-# polska lub angielska), następnie w zależności od wybranej figury musi podać parametry - bok, średnica, wysokość itp. Przed obliczeniami wartości muszą być sprawdzone (np. > 0). 
-# Po wpisaniu wszystkich wartości program wyświetla pole figury w formie pełnej odpowiedzi (np. “Pole figury <wybrana_figura> wynosi: <pole>”). Zadbaj o odpowiednie nazwy 
-# zmiennych (po angielsku!) oraz rzutowanie typów. 
-# UWAGA: Program wydaje się “szkolny”, ale będziemy do niego wielokrotnie wracać - przy pętlach dodamy do niego ponowne proszenie o podanie liczby, potem przeniesiemy
-# obliczenia do funkcji, dodamy obsługę wyjątków, napiszemy to z wykorzystaniem OOP, a chętni mogą nawet podpiąć Turtle i narysować te figury. Ale cierpliwości :-)
+type_of_shape = input("Podaj nazwę figury (prostokąt / trójkąt / koło: ")
+if type_of_shape == "prostokąt":
+    side_len1 = float(input("Podaj długość jednego boku: "))
+    side_len2 = float(input("Podaj długość drugiego boku: "))
+    if side_len1 >0 and side_len2:
+        print(f"Pole prostokąta wynosi {side_len1*side_len2:.2f}")
+    else:
+        print("Długość nie może być mniejsza od zera!!!")
+elif type_of_shape == "trójkąt":
+    base_len = float(input("Podaj długość podstawy: "))
+    height_len = float(input("Podaj długość wysokości: "))
+    if base_len > 0 and height_len > 0:
+        print(f"Pole trójkąta wynosi {0.5*base_len*height_len:.2f}")
+    else:
+        print("Długość nie może być mniejsza od zera!!!")
+elif type_of_shape == "koło":
+    diameter_len = float(input("Podaj długość średnicy: "))
+    if diameter_len > 0:
+        print(f"Pole koła wynosi {math.pi*((0.5*diameter_len)**2):.2f}")
+    else:
+        print("Długość nie może być mniejsza od zera!!!")
         
 expensess = {"January" : 1200, "February" : 1500, "March" : 1000, "April" : 1900, "May" : 1800, "June" : 2000, "July" : 1600, "August" : 1500, "September" : 1700, "October" : 1800, "November" : 1500, "December" : 2200}
 print(f"Wartość minimalna wydatków to: {min(expensess.values())} zł")
