@@ -21,9 +21,9 @@ elif (age < 18) and (money >= 20):
     print("Brakuje Ci " + str(18-age) + " lat do pełnoletności.")
 else:
     print("Brakuje Ci " + str(20-money) + " zł oraz "+ str(18-age) + " lat do pełnoletności.")
- """
 
-""" is_yearly = input("Podaj sposób podawania dochodu roczny (R) albo miesięczny (M): ")
+
+is_yearly = input("Podaj sposób podawania dochodu roczny (R) albo miesięczny (M): ")
 if is_yearly.upper() == "R":
     is_yearly = True
 else:
@@ -39,7 +39,7 @@ if(income <= 120000):
     print(f"Jesteś w pierwszym progu podatkowym. Twój podatek do zapłacenia to: {0.12*income} zł")
 else:
     tax_to_pay = 0.12*120000 + 0.32*(income - 120000)
-    print(f"Jesteś w drugim progu podatkowym. Twój podatek do zapłacenia to: {tax_to_pay} zł") """
+    print(f"Jesteś w drugim progu podatkowym. Twój podatek do zapłacenia to: {tax_to_pay} zł")
     
 
 type_of_shape = input("Podaj nazwę figury (prostokąt / trójkąt / koło: ")
