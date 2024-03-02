@@ -34,4 +34,7 @@ income = int(input("Podaj dochód brutto: "))
 if not is_yearly:
     income *= 12
 
-
+tax_bracket = 120000
+if(income <= 120000):
+    tax_to_pay = 0.12*income
+    
