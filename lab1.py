@@ -14,7 +14,7 @@ print("Teraz masz " + str(age) + " lat, a za rok będzie to " + str(age+1) + ". 
 age = int(input("Podaj ile masz lat: "))
 money = int(input("Podaj ile masz pieniędzy: "))
 if (age >= 18) and (money >= 20):
-    print("Jesteś pełnoletni i masz wystarczającą ilość pieniędz")
+    print("Jesteś pełnoletni i masz wystarczającą ilość pieniędzy")
 elif (age >= 18) and (money < 20):
     print("Brakuje Ci " + str(20-money) + " zł")
 elif (age < 18) and (money >= 20):
@@ -29,7 +29,6 @@ else:
     is_yearly = False
 
 income = int(input("Podaj dochód brutto: "))
-
 if not is_yearly:
     income *= 12
 
@@ -40,8 +39,7 @@ else:
     tax_to_pay = 0.12*120000 + 0.32*(income - 120000)
     print(f"Jesteś w drugim progu podatkowym. Twój podatek do zapłacenia to: {tax_to_pay} zł")
     
-
-type_of_shape = input("Podaj nazwę figury (prostokąt / trójkąt / koło: ")
+type_of_shape = input("Podaj nazwę figury (prostokąt / trójkąt / koło): ")
 if type_of_shape == "prostokąt":
     side_len1 = float(input("Podaj długość jednego boku: "))
     side_len2 = float(input("Podaj długość drugiego boku: "))
@@ -75,6 +73,7 @@ if expensess[calendar.month_name[datetime.datetime.now().month]] > average_expen
 else:
     print("W tym miesiącu jesteś bezpieczny\n")
 
+print("Miesiące w których wydatki były większe niż średnia: ")
 for month_to_be_listed, amount_to_be_listed in expensess.items():
     if(amount_to_be_listed > average_expensess):
         print(f"{month_to_be_listed} -> {amount_to_be_listed} zł")
