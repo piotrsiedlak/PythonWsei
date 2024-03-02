@@ -46,12 +46,7 @@ else:
 # zmiennych (po angielsku!) oraz rzutowanie typów. 
 # UWAGA: Program wydaje się “szkolny”, ale będziemy do niego wielokrotnie wracać - przy pętlach dodamy do niego ponowne proszenie o podanie liczby, potem przeniesiemy
 # obliczenia do funkcji, dodamy obsługę wyjątków, napiszemy to z wykorzystaniem OOP, a chętni mogą nawet podpiąć Turtle i narysować te figury. Ale cierpliwości :-)
-    
-
-# Zdefiniuj słownik, którego wartościami będą wydatki na życie w ostatnich kilku miesiącach, a kluczami nazwy miesięcy. Wyznacz i wyświetl wartość minimalną, maksymalną, sumę i 
-# wartość średnią (wykonaj odpowiednie operacje na liście wartości). Sprawdź czy kwota za ostatni miesiąc przekracza wartość średnią - jeśli tak, to wyświetl tekst ostrzeżenia 
-# “zacznij oszczędzać”, a jeśli nie, informację “jesteś bezpieczny”. Używając pętli wyświetl elementy słownika, każdy w innej linii, ale tylko jeśli przekraczają wartość średnią.
-    
+        
 expensess = {"January" : 1200, "February" : 1500, "March" : 1000, "April" : 1900, "May" : 1800, "June" : 2000, "July" : 1600, "August" : 1500, "September" : 1700, "October" : 1800, "November" : 1500, "December" : 2200}
 print(f"Wartość minimalna wydatków to: {min(expensess.values())} zł")
 print(f"Wartość maksymalna wydatków to: {max(expensess.values())} zł")
@@ -60,8 +55,10 @@ average_expensess = sum(expensess.values())/12
 print(f"Średnia wydatków to: {average_expensess:.2f} zł")
 
 if expensess[calendar.month_name[datetime.datetime.now().month]] > average_expensess:
-    print("Zacznij oszczędzać!")
+    print("W tym miesiącu zacznij oszczędzać!\n")
 else:
-    print("Jesteś bezpieczny")
+    print("W tym miesiącu jesteś bezpieczny\n")
 
-
+for month_to_be_listed, amount_to_be_listed in expensess.items():
+    if(amount_to_be_listed > average_expensess):
+        print(f"{month_to_be_listed} -> {amount_to_be_listed} zł")
