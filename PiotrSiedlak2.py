@@ -1,9 +1,24 @@
 # autor Piotr Siedlak
 # numer albumu 12460
 
+# zadanie 1
+#products = input("Podaj produkty oddzielone spacją: ")
+products = "ogorek pomidor ogorek marchew pomidor seler kalarepa seler por"
+products = products.split(" ")
+print(products)
+products = set(products)
+print(products)
 
+shop = {}
+for product in products:
+    price = float(input(f"Podaj cenę {product}: "))
+    shop[product]=price
 
-#zadanie2
+print("\nCAŁY SKLEP:")
+for product, price in shop.items():
+    print(f"{product} : {price} zł")
+    
+# zadanie 2
 import math
 
 def square(side_len1, side_len2):
