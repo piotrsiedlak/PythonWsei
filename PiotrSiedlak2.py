@@ -146,7 +146,7 @@ else:
     print(f"Rozwiazaniami rownania kwadratowego jest/są: {result}") 
 
 
-#zadanie 5
+# zadanie 5
 def print_triangle_iterative(height):
     for i in range(1, height + 1):
         print('*' * i)
@@ -156,4 +156,5 @@ def print_triangle_recursive(height):
     if height > 0:
         print_triangle_recursive(height - 1)
         print('*' * height)
+        
 print_triangle_recursive(4)
