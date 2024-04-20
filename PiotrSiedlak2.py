@@ -127,7 +127,7 @@ def square_root(a,b,c):
     delta = (b*b)-(4*a*c) 
     print(delta) 
     if(delta<0): 
-        return -1 
+        return False 
     else: 
         
         if(delta == 0): 
@@ -140,7 +140,7 @@ def square_root(a,b,c):
 #result = square_root(2,4,2) # jedno rozw 
 result = square_root(2,2,-12) # dwa rozw rzeczywiste 
 print(result) 
-if(result == -1): 
+if(!result): 
     print("Równanie nie ma rozwiązań rzeczywistych.") 
 else: 
     print(f"Rozwiazaniami rownania kwadratowego jest/są: {result}") 
