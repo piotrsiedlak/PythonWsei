@@ -5,9 +5,9 @@
 #products = input("Podaj produkty oddzielone spacją: ")
 products = "ogorek pomidor ogorek marchew pomidor seler kalarepa seler por"
 products = products.split(" ")
-print(products)
+#print(products)
 products = set(products)
-print(products)
+#print(products)
 
 shop = {}
 for product in products:
@@ -140,7 +140,7 @@ def square_root(a,b,c):
 #result = square_root(2,4,2) # jedno rozw 
 result = square_root(2,2,-12) # dwa rozw rzeczywiste 
 print(result) 
-if(!result): 
+if(not result): 
     print("Równanie nie ma rozwiązań rzeczywistych.") 
 else: 
     print(f"Rozwiazaniami rownania kwadratowego jest/są: {result}") 
