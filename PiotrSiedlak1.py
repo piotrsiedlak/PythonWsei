@@ -43,7 +43,7 @@ type_of_shape = input("Podaj nazwę figury (prostokąt / trójkąt / koło): ")
 if type_of_shape == "prostokąt":
     side_len1 = float(input("Podaj długość jednego boku: "))
     side_len2 = float(input("Podaj długość drugiego boku: "))
-    if side_len1 >0 and side_len2:
+    if side_len1 > 0 and side_len2 > 0:
         print(f"Pole prostokąta wynosi {side_len1*side_len2:.2f}")
     else:
         print("Długość nie może być mniejsza od zera!!!")
