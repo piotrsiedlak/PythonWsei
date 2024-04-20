@@ -42,7 +42,7 @@ while True:
         break
 
 
-# zadanie pesel
+# zadanie 3
 import calendar
 def number_to_month(number):
     month_name = calendar.month_name[number]
@@ -85,3 +85,60 @@ else:
     print("Mezczyzna")
 
 pesel_validate(pesel_num)
+
+
+# zadanie 4 
+
+def get_any_float(argument): 
+    while True: 
+        value = float(input(argument)) 
+        return value 
+
+a = get_float("Podaj liczbę a: ") 
+b = get_float("Podaj liczbę b: ") 
+c = get_float("Podaj liczbę c: ") 
+
+def triangle_field(a,b,c): 
+    if(a > 0 and b > 0 and c > 0): 
+        half_length = 0.5*(a+b+c) 
+        return pow((half_length*(half_length-a)*(half_length-b)*(half_length-c)),0.5) 
+    else: 
+        return -1 
+result = triangle_field(a,b,c)
+print(f"Pole trojkata wynosi: {result}") 
+
+
+def square_root(a,b,c): 
+    delta = (b*b)-(4*a*c) 
+    print(delta) 
+    if(delta<0): 
+        return -1 
+    else: 
+        
+        if(delta == 0): 
+            return (-1*b)/(2*a) 
+        else:
+            sqrt_delta = math.sqrt(delta)  
+            return ((-1*b)-sqrt_delta)/(2*a), ((-1*b)+sqrt_delta)/(2*a) 
+         
+#result = square_root(-4,2,-5) # brak rzeczywistych 
+#result = square_root(2,4,2) # jedno rozw 
+result = square_root(2,2,-12) # dwa rozw rzeczywiste 
+print(result) 
+if(result == -1): 
+    print("Równanie nie ma rozwiązań rzeczywistych.") 
+else: 
+    print(f"Rozwiazaniami rownania kwadratowego jest/są: {result}") 
+
+
+#zadanie 5
+def print_triangle_iterative(height):
+    for i in range(1, height + 1):
+        print('*' * i)
+print_triangle_iterative(4)
+
+def print_triangle_recursive(height):
+    if height > 0:
+        print_triangle_recursive(height - 1)
+        print('*' * height)
+print_triangle_recursive(4)
