@@ -47,3 +47,26 @@ haslo = "2qrNWJwuPF4cF87Y"
 server.login(from_address, haslo)
 server.send_message(msg)
 server.quit()
+
+# zadanie 3
+import datetime
+import calendar
+
+def get_last_work_day(year):
+    months = [
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+    ]
+    
+    for month in range(1, 13):
+        last_day = calendar.monthrange(year, month)[1]
+        date = datetime.date(year, month, last_day)
+        
+        while date.weekday() >= 5: 
+            date -= datetime.timedelta(days=1)
+        
+        formatted_date = date.strftime("%d-%m-%Y")
+        
+        print(f"{months[month - 1]}: {formatted_date}")
+
+get_last_work_day(2024)
